@@ -1,0 +1,35 @@
+<!-- <p>
+  dish-detail works!
+</p> -->
+<div class="overflow-y-scroll relative">
+  <button class="absolute top-5 left-5 block bg-black bg-opacity-20 shadow-sm" (click)="modalController.dismiss()">
+    <ion-icon name="chevron-back-outline" color="light"></ion-icon>
+  </button>
+  <img src="{{ dishInfo.strMealThumb }}" alt="{{ dishInfo.strMeal }}" class="w-full mx-auto rounded-b-2xl">
+  <div class="container mx-auto px-4 py-5">
+    <p class="text-lg font-semibold">{{ dishInfo.strMeal }}</p>
+    <p class="text-2xl font-medium">$30</p>
+    <div class="flex gap-1 my-2.5">
+      <ion-icon name="star" *ngFor="let n of [1, 2, 3, 4, 5]"></ion-icon>
+    </div>
+    <p class="text-sm">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Veritatis totam maxime est, cum tenetur facere dolores unde at temporibus sit dolore!
+    </p>
+    <div class="ingredients">
+      <label for="ingredient-check" class="font-medium text-lg w-full py-2.5 block">Ingredients</label>
+      <input type="checkbox" name="" id="ingredient-check" class="ingredient-check hidden">
+
+      <ul class="max-h-0 ingredient-accordion transition-all overflow-hidden list-disc pl-5">
+        <li class="py-1.5" *ngFor="let item of dishInfo.allIngredients">{{ item }}</li>
+      </ul>
+    </div>
+    <!-- <button class="bg-gray-500">ADD TO CART</button> -->
+
+   
+        <ion-button expand="block" mode="ios" class="text-base font-medium rounded-2xl" slot="bottom">ADD TO CART</ion-button>
+      
+
+
+  </div>
+</div>

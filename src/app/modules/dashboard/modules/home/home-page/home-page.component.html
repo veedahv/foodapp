@@ -1,0 +1,18 @@
+<div class="container mx-auto px-4">
+  <p>
+    home-page works!
+  </p>
+
+  <section class="my-4">
+    <h2 class="font-medium text-2xl">Today's Offer</h2>
+    <div class="flex gap-3.5 overflow-x-scroll items-stretch py-3">
+      <app-home-dish-card *ngFor="let item of popularOrders" [dish]="item" class=""></app-home-dish-card>
+    </div>
+  </section>
+  <section class="my-4">
+    <h2 class="font-medium text-2xl">Popular Orders</h2>
+    <div class="flex gap-3.5 overflow-x-scroll items-stretch py-3">
+      <app-home-dish-card *ngFor="let item of popularOrders" [dish]="item"></app-home-dish-card>
+    </div>
+  </section>
+</div>

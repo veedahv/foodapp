@@ -1,16 +1,33 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+// import { RouteGuardService } from './services/routeGuard/route-guard.service';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+  // {
+  //   path: 'home',
+  //   loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  // },
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    loadChildren: () =>
+      import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule),
+    // canActivate: [RouteGuardService],
   },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/auth/auth.module').then((m) => m.AuthModule),
+    },
+    {
+      path: '',
+      redirectTo: '',
+      pathMatch: 'full',
+    },
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full'
+  // },
 ];
 
 @NgModule({

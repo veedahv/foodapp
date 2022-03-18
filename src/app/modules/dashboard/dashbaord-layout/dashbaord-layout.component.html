@@ -1,0 +1,70 @@
+<!-- <p>
+  dashbaord-layout works!
+</p> -->
+
+
+<ion-app class="home">
+  <ion-header class="ion-no-border home__header">
+    <div class="home__header__user">
+      <div class="home__header__user__details">
+        <p class="home__header__user__details__subtitle">Welcome back</p>
+        <!-- <h1
+          class="home__header__user__details__title"
+          routerLink="/home/profile"
+        >
+          {{ user.name }}
+        </h1> -->
+      </div>
+      <!-- <img
+        class="home__header__user__image"
+        src="{{ user.profile_picture }}"
+        onerror="this.src='/assets/images/avatar.jpg'"
+        routerLink="/home/profile"
+        *ngIf="user.profile_picture"
+      /> -->
+      <!-- <p
+        class="home__header__user__icon"
+        routerLink="/home/profile"
+        *ngIf="!user.profile_picture"
+      >
+        {{ user.initials }}
+      </p> -->
+    </div>
+  </ion-header>
+  <ion-content>
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, ipsum! -->
+    <router-outlet></router-outlet>
+  </ion-content>
+  <ion-footer>
+    <!-- <app-bottom-navigation></app-bottom-navigation> -->
+    <ion-grid>
+      <ion-row class="ion-justify-content-center ion-align-items-center">
+        <ion-col class="text-center">
+          <a routerLink="/home" class="text-center cursor-pointer">
+            <ion-icon name="home" class="text-xl" slot="icon-only"></ion-icon>
+          </a>
+        </ion-col>
+        <ion-col class="text-center">
+          <a routerLink="/cart" class="text-center cursor-pointer">
+            <ion-icon name="cart" class="text-xl" slot="icon-only"></ion-icon>
+          </a>
+        </ion-col>
+        <ion-col class="text-center">
+          <a routerLink="/profile" class="text-center cursor-pointer">
+            <ion-icon name="person" class="text-xl" slot="icon-only"></ion-icon>
+          </a>
+        </ion-col>
+        <ion-col class="text-center">
+          <a routerLink="/search" class="text-center cursor-pointer">
+            <ion-icon name="search" class="text-xl" slot="icon-only"></ion-icon>
+          </a>
+        </ion-col>
+        <ion-col class="text-center">
+          <a routerLink="/orders" class="text-center cursor-pointer">
+            <ion-icon name="reader" class="text-xl" slot="icon-only"></ion-icon>
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
+</ion-app>
